@@ -1,0 +1,65 @@
+:root {
+    --main-color: #8b5e3c;
+    --accent-color: #d9a066;
+    --text-color: #333333;
+    --p-size: clamp(1rem, 1.1vw + 0.5rem, 1.25rem);
+    --h1-size: clamp(1.8rem, 3vw + 1rem, 3rem);
+    --h2-size: clamp(1.4rem, 2vw + 0.8rem, 2.2rem);
+    --h3-size: clamp(1.2rem, 1.5vw + 0.6rem, 1.7rem);
+    --img-width: min(90%, 700px);
+    --radius: 10px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: #fdfaf6;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+h1 {
+    text-align: justify;
+    text-indent: 60px;
+    font-size: var(--h1-size);
+    color: var(--main-color);
+}
+
+h2 {
+    text-align: justify;
+    text-indent: 60px;
+    font-size: var(--h2-size);
+    color: var(--main-color);
+}
+
+h3 {
+    text-align: justify;
+    text-indent: 60px;
+    font-size: var(--h3-size);
+    color: var(--accent-color);
+}
+
+p {
+    text-align: justify;
+    text-indent: 40px;
+    font-size: var(--p-size);
+    line-height: 1.6;
+}
+
+img {
+    width: var(--img-width);
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.caption {
+    text-align: center;
+    text-indent: 0;
+    font-size: calc(var(--p-size) * 0.9);
+    font-style: italic;
+    color: #777;
+}

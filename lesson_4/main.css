@@ -1,0 +1,23 @@
+:root {
+    --main-color: #0275d8;
+    --p-size: 1rem;
+}
+
+h2 {
+    text-align: justify;
+    text-indent: 100px;
+    font-size: calc(28px + 1vw);
+}
+
+.caption {
+    text-align: justify;
+    text-indent: 100px;
+    font-size: 2rem;
+    background-color: var(--main-color);
+}
+
+img {
+    width: calc(50% - 20px);
+    display: block;
+    margin: 0 auto;
+}

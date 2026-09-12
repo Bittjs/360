@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <p>Привет мир!</p>
+
+    <h1>Тема 49 - Родственные связи тегов</h1>
+
+    <h2>Родителем тега i является тег li </h2>
+    <ul>
+	<li>paragraph <i>
+		italic</i></li> 
+	<li>paragraph <i>
+		italic</i></li> 
+	<li>paragraph <i>
+		italic</i></li> 
+	<li>paragraph <i>
+		italic</i></li> 
+    </ul>
+
+    <h2>№1 li - родитель тега а, ul - родитель тега li, a родитель тега b</h2>
+    <ul>
+	<li>text <a href="">
+		link</a></li> 
+	<li>text <a href="">
+		link</a></li> 
+	<li>text <a href="">
+		link</a></li> 
+	<li>text <a href=""><b>bold 
+		link</b>
+		</a></li> 
+    </ul>
+
+    <h2>№2 tr - родитель тега td, table - родитель тега tr, table - дедушка тега td</h2>
+    
+    <table>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+        </tr>
+        <tr>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+        </tr>
+        <tr>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+        </tr>
+    </table>
+
+    <h2>№3 У абзаца потомки: i, b, a. Непосредственные потомки абзаца: i, a</h2>
+
+    <p>
+	This is a paragraph with text
+	<i><b>bold italic</b></i>
+	<a href="">link <i>
+		italic</i></a>. 
+    </p>
+
+    <h2>№4 У тега b родители: i, a, p. Непосредственный родитель тега b - тег i</h2>
+
+    <p>
+	<a href="">link <i><b>bold 
+		italic</b>
+		</i></a> 
+    </p>
+
+    <h1>Тема 50 - Наследование CSS свойств</h1>
+
+    <h2>№1 Текст в теге b будет синим, так как цвет наследуется от родителя p</h2>
+
+    <p>
+	This is some <b>text</b> 
+	in paragraph. 
+    </p>
+
+    <h2>№2 Текст в теге b будет красным, так как селектор b переопределяет цвет родителя p</h2>
+
+    <p>
+	This is some <b>text</b> 
+	in paragraph. 
+    </p>
+
+    <h2>№3 Текст в теге b будет красным, порядок селекторов не имеет значения</h2>
+
+    <p>
+	This is some <b>text</b> 
+	in paragraph. 
+    </p>
+
+    <h2>№4 Текст в теге li будет синим, так как цвет наследуется от родителя ul</h2>
+
+    <ul>
+	<li>text</li>
+	<li>text</li>
+	<li>text</li>
+    </ul>
+
+    <h2>№5 Текст в теге li будет красным, так как селектор li переопределяет цвет родителя ul</h2>
+
+    <ul>
+	<li>text</li>
+	<li>text</li>
+	<li>text</li>
+    </ul>
+
+    <h2>№6 Текст в теге i будет зелёным, так как селектор i переопределяет цвет родителей ul и li</h2>
+
+    <ul>
+	<li>text <i>italic</i> 
+		text</li> 
+	<li>text <i>italic</i> 
+		text</li> 
+	<li>text <i>italic</i> 
+		text</li> 
+    </ul>
+
+    <h2>№7 Текст в теге i будет размером 30px, так как селектор i задаёт свой размер и переопределяет размер родителя ul</h2>
+
+    <ul>
+	<li>text <i>italic</i> 
+		text</li> 
+	<li>text <i>italic</i> 
+		text</li> 
+	<li>text <i>italic</i> 
+		text</li> 
+    </ul>
+
+    <h1>Тема 51 - Группировка селекторов в CSS</h1>
+
+    <h2>№1 Упрощаем код с помощью группировки селекторов: h1, h2, h3 { text-align: center; }</h2>
+
+    <h1>Заголовок h1</h1>
+    <h2>Заголовок h2</h2>
+    <h3>Заголовок h3</h3>
+
+    <h1>Тема 52 - Общие свойства при группировке селекторов в CSS</h1>
+
+    <h2>№1 Группируем общее свойство text-align: center, остальное пишем отдельно</h2>
+
+    <h1>Заголовок h1</h1>
+    <h2>Заголовок h2</h2>
+    <h3>Заголовок h3</h3>
+
+    <h2>№2 Группируем общие свойства text-align: center и color: red, остальное пишем отдельно</h2>
+
+    <h1>Заголовок h1</h1>
+    <h2>Заголовок h2</h2>
+    <h3>Заголовок h3</h3>
+
+    <h1>Тема 53 - Селектор потомков в CSS</h1>
+
+    <h2>№1 Курсив из тегов ul красный, курсив из тегов p зелёный</h2>
+
+    <ul>
+	<li>text <i>italic</i></li>
+	<li>text <i>italic</i></li>
+	<li>text <i>italic</i></li>
+	<li>text <i>italic</i></li>
+    </ul>
+
+    <p>
+	paragraph text <i>italic</i>
+    </p>
+    <p>
+	paragraph text <i>italic</i>
+    </p>
+
+    <h2>№2 Курсив внутри тега b, который внутри тега p, красный</h2>
+
+    <p>
+	paragraph text <b><i>bold 
+		italic</i></b> 
+    </p>
+    <p>
+	paragraph text <i>italic</i>
+    </p>
+
+    <h1>Тема 54 - Дочерний селектор в CSS</h1>
+
+    <h2>№1 Только те теги b, которые являются непосредственными потомками тегов li, красные</h2>
+
+    <ul>
+	<li>
+		<i>italic</i>
+		<b>bold</b>
+		<b><i>bold italic</i></b>
+	</li>
+	<li>
+		<i>italic</i>
+		<b>bold</b>
+		<b><i>bold italic</i></b>
+	</li>
+    </ul>
+
+    <h1>Тема 55 - Классы элементов в CSS</h1>
+
+    <h2>№1 Элементы с классом odd красные, элементы с классом eve зелёные</h2>
+
+    <ul>
+	<li class="odd">text</li>
+	<li class="eve">text</li>
+	<li class="odd">text</li>
+	<li class="eve">text</li>
+	<li class="odd">text</li>
+	<li class="eve">text</li>
+    </ul>
+
+    <h2>№2 Все элементы с классом eee красные</h2>
+
+    <h2 class="eee">Title</h2>
+    <p class="eee">
+	paragraph
+    </p>
+    <p class="eee">
+	paragraph
+    </p>
+    <p>
+	paragraph without class
+    </p>
+
+    <ul class="eee">
+	<li>text</li>
+	<li>text</li>
+	<li>text</li>
+	<li>text</li>
+	<li>text</li>
+    </ul>
+
+    <h2>№3 Теги li красятся в красный цвет, потому что цвет наследуется от родителя ul, у которого задан класс eee</h2>
+
+    <h1>Тема 56 - Тег span для кусочков текста в HTML</h1>
+
+    <h2>№1 Элементы с классом xxx размером 30px</h2>
+
+    <p>
+	Lorem ipsum <span 
+		class="xxx">dolor sit</span> 
+		amet. 
+    </p>
+    <p>
+	<span class="xxx">Lorem 
+		ipsum</span> 
+		dolor sit amet. 
+    </p>
+
+    <h1>Тема 57 - Тег div для группировки тегов в HTML</h1>
+
+    <h2>№1 Первый див красный, второй див зелёный, третий див голубой</h2>
+
+    <div class="block1">
+	<h2>Title</h2>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+    </div>
+    <div class="block2">
+	<h2>Title</h2>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+    </div>
+    <div class="block3">
+	<h2>Title</h2>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+    </div>
+
+    <h2>№2 Первый и третий дивы красные, второй и четвёртый дивы зелёные</h2>
+
+    <div class="red">
+	<h2>Title</h2>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+    </div>
+    <div class="green">
+	<h2>Title</h2>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+    </div>
+    <div class="red">
+	<h2>Title</h2>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+    </div>
+    <div class="green">
+	<h2>Title</h2>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+    </div>
+
+    <h1>Тема 58 - Группировка классов в CSS</h1>
+
+    <h2>№1 Упрощаем код с помощью группировки классов: общие свойства line-height и font-family выносим отдельно</h2>
+
+    <p class="eee">
+	text
+    </p>
+    <p class="zzz">
+	text
+    </p>
+
+    <h2>№2 Упрощаем код с помощью группировки классов: общие свойства text-align и font-family выносим отдельно</h2>
+
+    <p class="eee">
+	text
+    </p>
+    <p class="zzz">
+	text
+    </p>
+    <p class="ggg">
+	text
+    </p>
+
+    <h1>Тема 59 - Тег с заданным классом в CSS</h1>
+
+    <h2>№1 h2 с классом header размером 40px, h3 с классом header размером 30px</h2>
+
+    <h2 class="header">text</h2>
+    <h2 class="header">text</h2>
+    <h3 class="header">text</h3>
+    <h3 class="header">text</h3>
+
+    <h1>Тема 60 - Селектор потомков и классы в CSS</h1>
+
+    <h2>№1 Все теги i, находящиеся в элементах с классом eee, красные</h2>
+
+    <p class="eee">
+	text <i>italic</i>
+    </p>
+    <p class="eee">
+	text <i>italic</i>
+    </p>
+    <div class="eee">
+	text <i>italic</i>
+    </div>
+    <div class="eee">
+	text <i>italic</i>
+    </div>
+
+    <h1>Тема 61 - Сложные комбинации селектора потомков и классов в CSS</h1>
+
+    <h2>№1 Селектор .eee .bbb выбирает элементы с классом bbb, находящиеся внутри элементов с классом eee</h2>
+
+    <div class="eee">
+	<p class="bbb">text</p>
+	<p class="bbb">text</p>
+    </div>
+
+    <h2>№2 Селектор .eee h2 выбирает теги h2, находящиеся внутри элементов с классом eee</h2>
+
+    <div class="eee">
+	<h2>Title</h2>
+	<h2>Title</h2>
+    </div>
+
+    <h2>№3 Селектор .eee h2.bbb выбирает теги h2 с классом bbb, находящиеся внутри элементов с классом eee</h2>
+
+    <div class="eee">
+	<h2 class="bbb">Title</h2>
+	<h2 class="bbb">Title</h2>
+    </div>
+
+    <h2>№4 Селектор .eee h3.bbb выбирает теги h3 с классом bbb, находящиеся внутри элементов с классом eee</h2>
+
+    <div class="eee">
+	<h3 class="bbb">Title</h3>
+	<h3 class="bbb">Title</h3>
+    </div>
+
+    <h2>№5 Селектор .eee p.bbb выбирает теги p с классом bbb, находящиеся внутри элементов с классом eee</h2>
+
+    <div class="eee">
+	<p class="bbb">text</p>
+	<p class="bbb">text</p>
+    </div>
+
+    <h2>№6 Селектор .eee .bbb .kkk выбирает элементы с классом kkk, находящиеся внутри элементов с классом bbb, которые в свою очередь находятся внутри элементов с классом eee</h2>
+
+    <div class="eee">
+	<div class="bbb">
+		<p class="kkk">text</p>
+		<p class="kkk">text</p>
+	</div>
+    </div>
+
+    <h1>Тема 62 - Ошибка новичков в селекторе потомков</h1>
+
+    <h2>№1 Селектор p.bbb выбирает абзацы с классом bbb</h2>
+
+    <p class="bbb">text</p>
+    <p class="bbb">text</p>
+
+    <h2>№2 Селектор p .bbb выбирает элементы с классом bbb, находящиеся внутри абзацев</h2>
+
+    <p>
+	text <span class="bbb">bbb</span>
+    </p>
+    <p>
+	text <span class="bbb">bbb</span>
+    </p>
+
+    <h2>№3 Селектор .eee p.bbb выбирает абзацы с классом bbb, находящиеся внутри элементов с классом eee</h2>
+
+    <div class="eee">
+	<p class="bbb">text</p>
+	<p class="bbb">text</p>
+    </div>
+
+    <h2>№4 Селектор .eee p .bbb выбирает элементы с классом bbb, находящиеся внутри абзацев, которые в свою очередь находятся внутри элементов с классом eee</h2>
+
+    <div class="eee">
+	<p>
+		text <span class="bbb">bbb</span>
+	</p>
+	<p>
+		text <span class="bbb">bbb</span>
+	</p>
+    </div>
+
+    <h1>Тема 63 - Элемент с несколькими CSS классами</h1>
+
+    <h2>№1 Первый абзац зелёный и с большим шрифтом, второй - красный и с маленьким, третий - красный и с большим, четвёртый - зелёный и с маленьким</h2>
+
+    <p class="success large">
+	text
+    </p>
+    <p class="error small">
+	text
+    </p>
+    <p class="error large">
+	text
+    </p>
+    <p class="success small">
+	text
+    </p>
+
+    <h2>№2 Тег с тремя классами одновременно</h2>
+
+    <p class="class1 class2 class3">
+	text
+    </p>
+
+    <h1>Тема 64 - Выбор элемента по уникальному id в CSS</h1>
+
+    <h2>№1 Блок elem1 красный, блок elem2 зелёный, блок elem3 голубой</h2>
+
+    <div id="elem1">
+	<h2>Title</h2>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+    </div>
+    <div id="elem2">
+	<h2>Title</h2>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+    </div>
+    <div id="elem3">
+	<h2>Title</h2>
+	<p>
+		text
+	</p>
+	<p>
+		text
+	</p>
+    </div>
+
+        <h1>Тема 65 - Селектор по id и CSS классы</h1>
+
+    <h2>№1 Блок с id block красный и Arial, все блоки с классом text размером 30px</h2>
+
+    <div id="block" class="text">
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+    </div>
+    <div class="text">
+	<p>text</p>
+	<p>text</p>
+	<p>text</p>
+    </div>
+
+        <h1>Тема 66 - Использование id в CSS</h1>
+
+    <h2>№1 Селектор #elem h2 выбирает все h2 внутри элемента с id elem</h2>
+
+    <div id="elem">
+	<h2>Choose</h2>
+	<p>---</p>
+	
+	<h2>Choose</h2>
+	<p>---</p>
+    </div>
+
+    <h2>Do not +++</h2>
+    <p>---</p>
+
+    <h2>№2 Селектор #elem .text выбирает все элементы с классом text внутри элемента с id elem</h2>
+
+    <div id="elem">
+	<p class="text">+++</p>
+	<p class="text">+++</p>
+	
+	<ul>
+		<li class="text">+++</li>
+		<li class="text">+++</li>
+		<li class="text">+++</li>
+		<li>---</li>
+		<li>---</li>
+	</ul>
+    </div>
+
+    <p class="text">---</p>
+
+    <h2>№3 Селектор #elem p.text выбирает все абзацы с классом text внутри элемента с id elem</h2>
+
+    <div id="elem">
+	<p class="text">+++</p>
+	<p class="text">+++</p>
+	
+	<ul>
+		<li class="text">---</li>
+		<li class="text">---</li>
+		<li class="text">---</li>
+		<li>---</li>
+		<li>---</li>
+	</ul>
+    </div>
+
+    <p class="text">---</p>
+
+    <h2>№4 Селектор #elem li.text выбирает все li с классом text внутри элемента с id elem</h2>
+
+    <div id="elem">
+	<p class="text">---</p>
+	<p class="text">---</p>
+	
+	<ul>
+		<li class="text">+++</li>
+		<li class="text">+++</li>
+		<li class="text">+++</li>
+		<li>---</li>
+		<li>---</li>
+	</ul>
+    </div>
+
+    <p class="text">---</p>
+
+        <h1>Тема 67 - Выбор элемента по нескольким классам в CSS</h1>
+
+    <h2>№1 Селектор .eee.zzz.ccc выбирает элемент, одновременно имеющий классы eee, zzz и ccc</h2>
+
+    <p class="eee">
+	This is a paragraph with text.
+    </p>
+    <p class="zzz">
+	This is a paragraph with text.
+    </p>
+    <p class="ccc">
+	This is a paragraph with text.
+    </p>
+    <p class="eee zzz ccc">
+	This is a paragraph with text.
+    </p>
+
+        <h1>Тема 68 - Несколько селекторов слитно в CSS</h1>
+
+    <h2>№1 Селектор .bbb.zzz выбирает элемент, одновременно имеющий класс bbb и класс zzz</h2>
+
+    <p class="bbb zzz">text</p>
+
+    <h2>№2 Селектор h2.bbb.zzz выбирает заголовок h2, одновременно имеющий класс bbb и класс zzz</h2>
+
+    <h2 class="bbb zzz">Title</h2>
+
+    <h2>№3 Селектор #elem.bbb выбирает элемент с id elem, имеющий класс bbb</h2>
+
+    <p id="elem" class="bbb">text</p>
+
+    <h2>№4 Селектор #elem.bbb.zzz выбирает элемент с id elem, одновременно имеющий класс bbb и класс zzz</h2>
+
+    <p id="elem" class="bbb zzz">text</p>
+
+    <h2>№5 Селектор h2#elem.bbb выбирает заголовок h2 с id elem, имеющий класс bbb</h2>
+
+    <h2 id="elem" class="bbb">Title</h2>
+
+        <h1>Тема 69 - Ошибка при использовании несколько CSS селекторов</h1>
+
+    <h2>№1 Селектор h2.zzz выбирает заголовок h2 с классом zzz</h2>
+
+    <h2 class="zzz">Title</h2>
+
+    <h2>№2 Селектор h2 .zzz выбирает элементы с классом zzz, находящиеся внутри заголовка h2</h2>
+
+    <h2>Title <span class="zzz">zzz</span></h2>
+
+    <h2>№3 Селектор .bbb.zzz выбирает элемент, одновременно имеющий класс bbb и класс zzz</h2>
+
+    <p class="bbb zzz">text</p>
+
+    <h2>№4 Селектор .bbb .zzz выбирает элементы с классом zzz, находящиеся внутри элементов с классом bbb</h2>
+
+    <div class="bbb">
+	<p class="zzz">text</p>
+    </div>
+
+    <h2>№5 Селектор .bbb.zzz.xxx выбирает элемент, одновременно имеющий классы bbb, zzz и xxx</h2>
+
+    <p class="bbb zzz xxx">text</p>
+
+    <h2>№6 Селектор .bbb .zzz.xxx выбирает элементы, одновременно имеющие классы zzz и xxx, находящиеся внутри элементов с классом bbb</h2>
+
+    <div class="bbb">
+	<p class="zzz xxx">text</p>
+    </div>
+
+    <h2>№7 Селектор .bbb.zzz .xxx выбирает элементы с классом xxx, находящиеся внутри элементов, одновременно имеющих классы bbb и zzz</h2>
+
+    <div class="bbb zzz">
+	<p class="xxx">text</p>
+    </div>
+
+    <h2>№8 Селектор .bbb .zzz .xxx выбирает элементы с классом xxx, находящиеся внутри элементов с классом zzz, которые в свою очередь находятся внутри элементов с классом bbb</h2>
+
+    <div class="bbb">
+	<div class="zzz">
+		<p class="xxx">text</p>
+	</div>
+    </div>
+
+    <h2>№9 Селектор #elem.bbb выбирает элемент с id elem, имеющий класс bbb</h2>
+
+    <p id="elem" class="bbb">text</p>
+
+    <h2>№10 Селектор #elem .bbb выбирает элементы с классом bbb, находящиеся внутри элемента с id elem</h2>
+
+    <div id="elem">
+	<p class="bbb">text</p>
+    </div>
+
+        <h1>Тема 70 - Группировка сложных селекторов в CSS</h1>
+
+    <h2>№1 Упрощаем код с помощью группировки селекторов</h2>
+
+    <div id="block">
+	<h1>Title h1</h1>
+	<h2>Title h2</h2>
+    </div>
+
+    <h2>№2 Упрощаем код с помощью группировки селекторов: общее свойство выносим отдельно</h2>
+
+    <div id="block">
+	<h1>Title h1</h1>
+	<h2>Title h2</h2>
+    </div>
+
+        <h1>Тема 71 - Ошибка при группировке сложных CSS селекторов</h1>
+
+    <h2>№1 Упрощаем код с помощью группировки селекторов</h2>
+
+    <div id="block">
+	<h1>Title h1</h1>
+	<h2>Title h2</h2>
+	<h3>Title h3</h3>
+    </div>
+
+    <h2>№2 Упрощаем код с помощью группировки селекторов</h2>
+
+    <div id="block">
+	<h1 class="eee">Title h1</h1>
+	<h2 class="zzz">Title h2</h2>
+    </div>
+
+    <h2>№3 Упрощаем код с помощью группировки селекторов</h2>
+
+    <div class="xxx">
+	<p class="kkk">text</p>
+    </div>
+    <div class="eee">
+	<h2 class="zzz">Title</h2>
+    </div>
+    <div id="eee">
+	<h2>Title</h2>
+    </div>
+
+    <h2>№4 Упрощаем код с помощью группировки селекторов</h2>
+
+    <div class="eee">
+	<h2 class="zzz">Title</h2>
+    </div>
+    <p class="xxx">text</p>
+
+        <h1>Тема 72 - Практика на комбинации CSS селекторов</h1>
+
+    <h2>№1 Селектор div p выбирает абзацы внутри дивов</h2>
+
+    <div>
+	<p>+++</p>
+	<p>+++</p>
+    </div>
+    <div>
+	<p>+++</p>
+    </div>
+
+    <p>---</p>
+    <p>---</p>
+
+    <h2>№2 Селектор div h2 выбирает все h2 внутри дивов</h2>
+
+    <div>
+	<h2>+++</h2>
+	<p>---</p>
+	<p>---</p>
+    </div>
+    <div>
+	<h2>+++</h2>
+	<p>---</p>
+    </div>
+
+    <h2>---</h2>
+    <p>---</p>
+
+    <h2>№3 Селектор #block p выбирает все абзацы из элемента с id block</h2>
+
+    <div id="block">
+	<h2>---</h2>
+	<p>+++</p>
+	<p>+++</p>
+    </div>
+    <div>
+	<h2>---</h2>
+	<p>---</p>
+    </div>
+
+    <h2>---</h2>
+    <p>---</p>
+
+    <h2>№4 Селектор #block h2 выбирает все h2 из элемента с id block</h2>
+
+    <div id="block">
+	<h2>+++</h2>
+	<p>---</p>
+	<p>---</p>
+	
+	<h2>+++</h2>
+	<p>---</p>
+    </div>
+    <div>
+	<h2>---</h2>
+	<p>---</p>
+    </div>
+
+    <h2>---</h2>
+    <p>---</p>
+
+    <h2>№5 Селектор .bbb выбирает все элементы с классом bbb</h2>
+
+    <div id="block">
+	<h2 class="bbb">+++</h2>
+	<p class="bbb">+++</p>
+	<p>---</p>
+	
+	<h2 class="bbb">+++</h2>
+	<p>---</p>
+    </div>
+    <div class="bbb">+++</div>
+
+    <h2>---</h2>
+    <p class="bbb">+++</p>
+
+    <h2>№6 Селектор #block .bbb выбирает все элементы с классом bbb из элемента с id block</h2>
+
+    <div id="block">
+	<h2 class="bbb">+++</h2>
+	<p class="bbb">+++</p>
+	<p>---</p>
+	
+	<h2 class="bbb">+++</h2>
+	<p>---</p>
+    </div>
+    <div class="bbb">---</div>
+
+    <h2>---</h2>
+    <p class="bbb">---</p>
+
+    <h2>№7 Селектор p.bbb выбирает все абзацы с классом bbb</h2>
+
+    <div id="block">
+	<h2 class="bbb">---</h2>
+	<p class="bbb">+++</p>
+	<p>---</p>
+	
+	<h2 class="bbb">---</h2>
+	<p class="bbb">+++</p>
+    </div>
+    <div class="bbb">---</div>
+
+    <h2>---</h2>
+    <p class="bbb">+++</p>
+
+    <h2>№8 Селектор h2.bbb выбирает все h2 с классом bbb</h2>
+
+    <div id="block">
+	<h2 class="bbb">+++</h2>
+	<p class="bbb">---</p>
+	<p>---</p>
+	
+	<h2 class="bbb">+++</h2>
+	<p class="bbb">---</p>
+    </div>
+
+    <h2>---</h2>
+    <p class="bbb">---</p>
+
+    <h2 class="bbb">+++</h2>
+    <p class="bbb">---</p>
+
+    <h2>№9 Селектор #block p.bbb выбирает все абзацы с классом bbb из элемента с id block</h2>
+
+    <div id="block">
+	<h2 class="bbb">---</h2>
+	<p class="bbb">+++</p>
+	<p>---</p>
+	
+	<h2 class="bbb">---</h2>
+	<p class="bbb">+++</p>
+    </div>
+    <div class="bbb">---</div>
+
+    <h2>---</h2>
+    <p class="bbb">---</p>
+
+    <h2>№10 Селектор .bbb, .xxx выбирает все элементы с классом bbb и все элементы с классом xxx</h2>
+
+    <h2 class="bbb">+++</h2>
+    <p class="bbb">+++</p>
+
+    <h2 class="xxx">+++</h2>
+    <p>---</p>
+
+    <h2>---</h2>
+    <p class="xxx">+++</p>
+
+    <div class="bbb">+++</div>
+
+    <h2>№11 Селектор p.bbb, h2.xxx выбирает абзацы с классом bbb и h2 с классом xxx</h2>
+
+    <h2 class="bbb">---</h2>
+    <p class="bbb">+++</p>
+
+    <h2 class="xxx">+++</h2>
+    <p>---</p>
+
+    <h2>---</h2>
+    <p class="xxx">---</p>
+
+    <div class="bbb">---</div>
+
+    <h2>№12 Селектор #block p.bbb, #block p.xxx выбирает абзацы с классом bbb и xxx из элемента с id block</h2>
+
+    <div id="block">
+	<h2 class="bbb">---</h2>
+	<p class="bbb">+++</p>
+	
+	<h2 class="xxx">---</h2>
+	<p>---</p>
+	
+	<h2>---</h2>
+	<p class="xxx">+++</p>
+	
+	<div class="bbb">---</div>
+	<div class="xxx">---</div>
+    </div>
+
+    <h2 class="bbb">---</h2>
+    <p class="xxx">---</p>
+
+    <h2>№13 Селектор .fff выбирает все элементы с классом fff</h2>
+
+    <div class="fff">+++</div>
+
+    <h2 class="fff">+++</h2>
+    <p class="fff">+++</p>
+
+    <h2 class="bbb">---</h2>
+    <p class="xxx">---</p>
+
+    <h2>№14 Селектор .fff p выбирает все абзацы из элемента с классом fff</h2>
+
+    <div class="fff">
+	<h2>---</h2>
+	<p>+++</p>
+	<p>+++</p>
+    </div>
+
+    <h2 class="fff">---</h2>
+    <p class="fff">---</p>
+
+    <h2>№15 Селектор p.fff выбирает все абзацы с классом fff</h2>
+
+    <div id="block">
+	<h2>---</h2>
+	<p>---</p>
+	<p>---</p>
+	<p class="fff">+++</p>
+    </div>
+
+    <h2 class="fff">---</h2>
+    <p class="fff">+++</p>
+
+    <h2>№16 Селектор .fff .bbb выбирает все элементы с классом bbb из элемента с классом fff</h2>
+
+    <div class="fff">
+	<h2 class="bbb">+++</h2>
+	<p>---</p>
+	<p>---</p>
+	<p class="bbb">+++</p>
+    </div>
+
+    <h2 class="fff">---</h2>
+    <p class="bbb">---</p>
+
+    <h2>№17 Селектор .fff h2.bbb выбирает все h2 с классом bbb из элемента с классом fff</h2>
+
+    <div class="fff">
+	<h2 class="bbb">+++</h2>
+	<p>---</p>
+	
+	<h2 class="bbb">+++</h2>
+	<p>---</p>
+	<p class="bbb">---</p>
+    </div>
+
+    <h2 class="bbb">---</h2>
+    <p class="bbb">---</p>
+    <p class="fff">---</p>
+
+        <h1>Тема 73 - Приоритет селекторов CSS</h1>
+
+    <h2>№1 Заголовки будут размером 30px, так как второй селектор переопределяет первый</h2>
+
+    <h2>text</h2>
+
+        <h1>Тема 74 - Замечание к конфликту свойств CSS</h1>
+
+    <h2>№1 Применятся: font-size: 20px, font-style: italic, color: red (color переопределяется вторым селектором)</h2>
+
+    <h2>text</h2>
+</body>
