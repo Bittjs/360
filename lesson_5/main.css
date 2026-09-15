@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: sans-serif;
+    background: #f0f0f0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #e0e0e0;
+    background-image: linear-gradient(135deg, #e0e0e0 25%, #ececec 25%, #ececec 50%, #e0e0e0 50%, #e0e0e0 75%, #ececec 75%);
+    background-size: 16px 16px; /* лёгкая "заглушка", что тут будет фото */
+    flex-shrink: 0;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Название товара */
+.name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #222;
+    padding: 6px 6px 2px;
+    line-height: 1.2;
+    min-height: 28px;
+    overflow: hidden;
+}
+
+/* Цена */
+.price {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e63946;
+    padding: 2px 6px 6px;
+    margin-top: auto;
+}
+
+/* Телефон: 3 карточки в ряд */
+@media (max-width: 850px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        padding: 8px;
+    }
+    .name {
+        font-size: 10px;
+        padding: 4px 4px 2px;
+        min-height: 24px;
+    }
+    .price {
+        font-size: 11px;
+        padding: 2px 4px 4px;
+    }
+}
+.add-to-cart {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.add-to-cart:hover {
+    background: #1a252f;
+}
+
+.add-to-cart:active {
+    transform: scale(0.98);
+}
+
+.add-to-cart:focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
